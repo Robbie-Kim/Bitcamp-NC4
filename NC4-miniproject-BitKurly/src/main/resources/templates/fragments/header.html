@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+<header th:fragment="header" id="header" style="height: 110px;">
+    <div class="row1">
+        <div class="container">
+            <ul>
+                <li><a th:href="@{/user/join}">회원가입</a></li>
+                <li><i>|</i></li>
+                <li sec:authorize="!isAuthenticated()" ><a th:href="@{/user/login}">로그인</a></li>
+                <li sec:authorize="isAuthenticated()" ><a th:href="@{/user/profile}">회원정보</a></li>
+                <li sec:authorize="isAuthenticated()" ><i>|</i></li>
+                <li sec:authorize="isAuthenticated()" ><a th:href="@{/logout}">로그아웃</a></li>
+                <li><i>|</i></li>
+                <!-- 고객센터 (구), 02.05 수정 -->
+                <li class="service-box">
+                    <a href="/board/board-list" class="service-center-btn">고객센터<img id="phone" src="/img/ico_down_16x10.png" alt=""></a>
+                    <div class="top-tooltip">
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">대량주문 문의</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="container">
+            <div class="left">
+                <ul>
+                    <li> <!-- 홈 -->
+                        <h1>
+                            <a href="/" title="마켓컬리">
+                                <img src="/img/bitkurly-logo2.png" alt="">
+                                <span>비트컬리</span>
+                            </a>
+                        </h1>
+                    </li>
+                    <!-- | -->
+                    <!-- <li> 
+                        <i>|</i>
+                    </li> -->
+                    <!-- 뷰티컬리 -->
+                    <!-- <li> 
+                        <span>
+                        <a href="#" title="뷰티컬리">뷰티컬리 <img src="/img/n_red.svg" alt=""></a>
+                     </span>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="center">
+                <form name="search_form" id="searchForm" method="get" action="/search">
+                    <div class="search-box">
+                        <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search-btn" title="search" >
+                            <a class="search-btn" title="search" ><img src="/img/search.svg" alt=""></a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+                <!--상품 추가 버튼 생성 / 24.01.16-->
+                <div>
+                    <a sec:authorize="isAuthenticated()" href="/item/item-add" title="상품 추가"><img src="/img/addItem.svg"> </a>
+                </div>
+                <div class="map-tooltip-box">
+                    <a href="/board/board-list"><img class="phone" src="/img/phone-volume-solid.svg" alt="고객센터" title="고객센터"></a>
+                    <!-- 배송지 버튼 (02.05 해제) -->
+                    <!-- <a href="#" title="배송지" class="map-tootip-btn"><img src="/img/map.svg" alt=""></a> -->
+                    <div class="map-tooltip-memnu">
+                        <ul>
+                            <li>
+                                <em>배송지를 등록</em>
+                                <span>구매 가능한 상품을 확인하세요!</span>
+                            </li>
+                            <li>
+                                <button class="login-btn">로그인</button>
+                                <button class="address-search-btn"><img src="/img/search_white.png" alt=""><span>주소검색</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 찜하기 버튼 (02.05 해제) -->
+                <!-- <div>
+                    <a href="#" title="찜하기"><img src="/img/heart.svg" alt=""></a>
+                </div> -->
+
+                <div>
+                    <a href="/cart/mycart" title="장바구니"><img src="/img/cart.svg" alt="장바구니 모양"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 스크롤탑값이 100픽셀 이상이면 헤더영역 row3을 고정한다. -->
+    <!-- <div class="row3" style="background-color: #5f0080; height: 10px;">
+    </div> -->
+    <!-- <div class="row3">
+        <div class="container">
+            <div class="left">
+                <a href="#" title="카테고리">
+                    <img src="/img/app_bar.svg" alt="">
+                    <strong>카테고리</strong>
+                </a>
+            </div>
+            <div class="center">
+                <ul>
+                    <li><a href="./sub_page/sub1/" class="main-btn on" title="신상품">신상품</a></li>
+                    <li><a href="./sub_page/sub2/" class="main-btn" title="베스트">베스트</a></li>
+                    <li><a href="./sub_page/sub3/" class="main-btn" title="알뜰쇼핑">알뜰쇼핑</a></li>
+                    <li><a href="./sub_page/sub4/" class="main-btn" title="특가혜택">특가혜택</a></li>
+                </ul>
+            </div>
+            <div class="right">
+               <span>
+                  <a href="#">
+                     <em>샛별<i>·</i>낮</em><strong>배송안내</strong>
+                  </a>
+               </span>
+            </div>
+        </div>
+    </div> -->
+</header>
+</body>
+</html>

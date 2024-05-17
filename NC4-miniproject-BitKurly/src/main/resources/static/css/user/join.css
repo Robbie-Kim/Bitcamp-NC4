@@ -1,0 +1,319 @@
+#content {
+    min-width: 1050px;
+    width:100%;
+    padding-bottom: 120px;
+    position: relative;
+    height: auto;
+}
+
+.form-wrapper {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.member_join {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.member_join .field_head .tit {
+    padding-top: 64px;
+    font-weight: 900;
+    font-size: 30px;
+    color: #333;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -.5px;
+}
+
+.member_join .field_head .sub {
+    padding: 23px 0 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 17px;
+    text-align: right;
+}
+
+.member_join .field_head .sub .ico {
+    padding-right: 2px;
+    color: #ee6a7b;
+}
+
+.member_join .tbl_comm {
+    width: 100%;
+    border-top: 2px solid #333;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.member_join .tbl_comm .fst th {
+    padding-top: 29px;
+}
+
+.member_join th {
+    width: 159px;
+    padding: 20px 0 0 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.member_join th .ico {
+    color: #ee6a7b;
+}
+
+.screen_out {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.member_join .tbl_comm .fst td {
+    padding-top: 19px;
+}
+
+.member_join td {
+    padding: 10px 0;
+    border-top: 0;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.member_join input[type=text], .member_join input[type=password] {
+    width: 332px;
+}
+
+.type_form textarea, .type_form input[type=text], .type_form input[type=password] {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    vertical-align: top;
+}
+
+.type_form .btn.default {
+    border: 1px solid #5f0080;
+    background-color: #fff;
+    color: #5f0080;
+}
+
+.member_join .btn {
+    width: 120px;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+.type_form .btn {
+    display: block;
+    height: 44px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    outline: none;
+    float : right;
+}
+
+.member_join .txt_guide {
+    width: 332px;
+}
+
+.type_form .txt_guide {
+    display: none;
+    padding: 10px 0 9px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    word-break: break-all;
+    letter-spacing: -.1px;
+    clear: both;
+}
+
+.type_form .txt_guide .txt {
+    display: block;
+}
+
+.type_form .square .txt:before {
+    content: '\2022';
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.member_join .field_address {
+    padding-bottom: 10px;
+}
+
+.member_join #addressSearch{
+    display: block;
+    overflow: hidden;
+    width: 332px;
+    height: 44px;
+    border: 1px solid #5f0080;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.member_join #addressNo {
+    display: inline-block;
+    height: 100%;
+    margin-left: -14px;
+    padding-left: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5f0080;
+    line-height: 40px;
+    background: url(https://res.kurly.com/pc/service/common/2006/ico_search.svg) no-repeat 0 50%;
+    background-size: 25px 24px;
+    vertical-align: top;
+}
+
+.member_join .birth .birth_day {
+    overflow: hidden;
+    width: 332px;
+    padding-left: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.member_join .birth .birth_day input[type=text] {
+    float: left;
+    width: 84px;
+    height: 40px;
+    border: 0;
+    text-align: center;
+}
+
+.member_join .birth .bar {
+    float: left;
+}
+
+.member_join .birth .bar:after {
+    content: "/";
+    float: left;
+    width: 22px;
+    height: 100%;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 42px;
+    text-align: center;
+}
+
+.member_join .form_footer {
+    padding-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.member_join .form_footer .btn_join {
+    width: 240px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 54px;
+}
+
+.type_form .btn.active {
+    border: 1px solid #5f0081;
+    background-color: #5f0080;
+    color: #fff;
+}
+
+.btn.default:hover {
+    cursor: pointer;
+}
+
+.btn.active:hover {
+    cursor: pointer;
+}
+
+input::placeholder{
+    color:rgb(165, 160, 160);
+}
+
+.field_address input{
+    display:none;
+    margin-top:10px
+}
+
+.field_address button {
+    background: white;
+}
+
+.field_address button:hover {
+    cursor: pointer;
+}
+
+.field_address #btnReSearch {
+    display: none;
+}
+
+#addrZone {
+    margin-bottom: 20px;
+}
+
+#addrBasic {
+    margin-top : 20px;
+    margin-bottom: 20px;
+}
+
+#addrDetail {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#userGender div { display:flex; width: 332px; justify-content: space-between; }
+
+#userGender .radio_box { display: inline-block; *display: inline; *zoom: 1; position: relative; padding-left: 10%; cursor: pointer; font-size: 14px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+/* 기본 라디오 버튼 숨기기 */
+#userGender .radio_box input[type="radio"] { display: none; }
+
+/* 선택되지 않은 라디오 버튼 스타일 꾸미기 */
+#userGender .on { width: 24px; height: 24px; background: #fff; border: 1px solid #a5a0a0; border-radius: 50%; position: absolute; top: 0; left: 0; transform: translateY(-20%);}
+
+/* 선택된 라디오 버튼 스타일 꾸미기 */
+#userGender .radio_box input[type="radio"]:checked + .on { background: #5f0081;}
+
+#userGender .on:after { content: ""; position: absolute; display: none; }
+#userGender .radio_box input[type="radio"]:checked + .on:after { display: block; }
+
+#userGender .on:after { width: 10px; height: 10px; background: #fff; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+/* 기본배송지 관련 css */
+#addrStandard {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#checkStandard {
+    margin-bottom: 10px;
+}
+
+#checkStandard label.check_box {
+    cursor: pointer;
+}
+

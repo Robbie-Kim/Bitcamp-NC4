@@ -1,0 +1,135 @@
+.search-main {
+    display: flex;
+    flex-direction: column;
+    width: 1068px;
+    margin: 0px auto;
+}
+
+.search-total {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+}
+
+.bg {
+    width: 249px;
+    height: 320px;
+}
+
+.search-direction {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    justify-content: right;
+}
+
+.search-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 249px);
+    gap: 31px 18px;
+    width: 100%;
+}
+
+.item-box {
+    isplay: flex;
+    flex-direction: column;
+    height: 480px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+.img-box {
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    /*display: block;*/
+    width: 249px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.img-size {
+    width: 249px;
+    height: 320px;
+}
+
+.caption-box {
+    padding: 8px 10px 0px 0px;
+    display: block;
+    flex-direction: column;
+}
+
+.letter-delivery{
+    padding-top: 8px;
+    display: block;
+    padding-bottom: 2px;
+}
+
+.letter-item-title{
+    max-height: 58px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.letter-item-desc{
+    padding-top: 4px;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    line-height: 18px;
+    letter-spacing: normal;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.letter-item-price{
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    padding-top: 8px;
+}
+
+.pagination {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: -webkit-box;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.pagination_main {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-btn {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}

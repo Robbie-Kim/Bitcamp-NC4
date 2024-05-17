@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/css/admin/admin_common.css}">
+        <link rel="stylesheet" th:href="@{/css/admin/admin_page_prd_upload.css}">
+    </th:block>
+    <th:block layout:fragment="script">
+        <script>
+            $(() => {
+                $("#saveForm").on("submit", function() {
+                    if($("#image")[0].files.length == 0) {
+                        $("#image").attr("disabled", "disabled");
+                    }
+                });
+            });
+        </script>
+    </th:block>
+</head>
+<body>
+
+<div layout:fragment="content" id="main">
+    <div class="page_aticle aticle_type2">
+        <div id="snb" class="snb_my">
+            <h2 class="tit_snb">고객센터</h2>
+            <div class="inner_snb">
+                <ul class="list_menu">
+                    <li>
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">자주하는 질문</a>
+                    </li>
+                    <li>
+                        <a href="/board/board-list">1:1 문의</a>
+                    </li>
+                    <li>
+                        <a href="#">대량주문 문의</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="viewOrderList" class="page_section section_orderlist">
+            <div class="head_aticle">
+                <h2 class="tit">
+                    1:1문의
+                </h2>
+            </div>
+
+            <div class="list_order">
+                <form action="/board/save" id="saveForm" method="post" enctype="multipart/form-data">
+                    <div class="size">
+                        <div class="p_board">
+                            <table width="100%">
+                                <tbody>
+                                <tr>
+                                    <th >유형</th>
+                                    <td colspan="2">
+                                        <div>
+                                                <span>
+                                                    <input type="text" name="boardCategory" class="i_text text1">
+                                                </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th >작성자</th>
+                                    <td colspan="2">
+                                        <div>
+                                                <span>
+                                                    <input type="text" name="boardWriter" class="i_text text1" >
+                                                </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>제목</th>
+                                    <td colspan="2">
+                                        <div>
+                                                <span>
+                                                    <input type="text" class="i_text text2" name="boardTitle">
+                                                </span>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>내용</th>
+                                    <td>
+                                        <div>
+                                                <span>
+                                                    <textarea class="i_text text8" name="boardContents" id="" cols="30" rows="10"></textarea>
+                                                </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>이미지</th>
+                                    <td class="img_upload">
+
+                                        <input type="file" name="boardFile" id="image" accept="image/*" onchange="preview()"  multiple>
+
+                                        <div id="image_container_3">
+
+                                        </div>
+                                        <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
+                                        <script>
+                                            let fileInput = document.getElementById("image");
+                                            let imageContainer = document.getElementById("image_container_3");
+                                            function preview(){
+
+
+                                                const fileArr = Array.prototype.slice.call(fileInput.files);
+
+                                                for(i of fileArr) {
+                                                    let reader = new FileReader();
+
+                                                        reader.onload = function (event) {
+                                                            let img = document.createElement("img");
+                                                            img.setAttribute("src",event.target.result);
+
+                                                            $("#image_container_3").append(img);
+
+                                                        }
+                                                    reader.readAsDataURL(i);
+                                                    // })
+                                                }
+                                            }
+                                        </script>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="product_submit" class="pd_submit">
+                            <button type="submit">등록하기</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
